@@ -1,0 +1,10 @@
+<%= form_with url: sessions_path, local: true do |form| %>
+
+
+    <%= form.label :username %>
+    <%= form.text_field :username, placeholder: "Username"%>
+
+  <div class="actions">
+    <%= form.submit "Sign In" %>
+  </div>
+<% end %>
