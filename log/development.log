@@ -2364,3 +2364,122 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4708)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-05-01 17:58:36 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mihndim/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mihndim/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 336)
+Completed 200 OK in 21ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 2522)
+
+
+Started GET "/users/login" for ::1 at 2021-05-01 17:58:56 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms | Allocations: 2576)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=login):
+  
+app/controllers/users_controller.rb:62:in `set_user'
+Started GET "/users/sign_up" for ::1 at 2021-05-01 17:59:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_up"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `set_user'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1171)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_up):
+  
+app/controllers/users_controller.rb:62:in `set_user'
+Started GET "/users/signup" for ::1 at 2021-05-01 17:59:16 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 21.4ms | Allocations: 6461)
+  Rendered users/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 6806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 12424)
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 16352)
+
+
+Started GET "/users/new" for ::1 at 2021-05-01 17:59:34 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.8ms | Allocations: 738)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3893)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 4287)
+
+
+Started GET "/sessions/login" for ::1 at 2021-05-01 17:59:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 9.2ms | Allocations: 1556)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 4840)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 5765)
+
+
+Started POST "/sessions" for ::1 at 2021-05-01 17:59:51 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"mihndim2010", "commit"=>"Sign In"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mihndim2010"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 7.1ms | Allocations: 1272)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 4321)
+Completed 200 OK in 57ms (Views: 35.7ms | ActiveRecord: 2.2ms | Allocations: 5481)
+
+
+Started GET "/sessions/create" for ::1 at 2021-05-01 18:00:45 -0400
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:73:in `set_session'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.6ms | Allocations: 3512)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Session with 'id'=create):
+  
+app/controllers/sessions_controller.rb:73:in `set_session'
+Started GET "/sessions/login" for ::1 at 2021-05-01 18:01:00 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 1.3ms | Allocations: 1275)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4345)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4724)
+
+
+Started POST "/sessions" for ::1 at 2021-05-01 18:01:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"mihndim2010", "commit"=>"Sign In"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mihndim2010"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 6.4ms | Allocations: 1273)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4324)
+Completed 200 OK in 34ms (Views: 24.5ms | ActiveRecord: 1.0ms | Allocations: 5278)
+
+
