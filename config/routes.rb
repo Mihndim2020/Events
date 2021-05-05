@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :events
+  root 'users#index'
+
   get '/sessions/login' => 'sessions#new', as: 'login'
   post '/sessions/login', to: 'sessions#create'
   get '/sessions/logout' => 'sessions#destroy', as: 'logout'
