@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
     else
       flash.now.alert = "Username is invalid"
       render 'new'
+      
     end
     # @session = Session.new(session_params)
 
